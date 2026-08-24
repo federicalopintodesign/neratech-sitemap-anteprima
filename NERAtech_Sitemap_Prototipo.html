@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>NERAtech — Anteprima struttura sito</title>
+<style>
+  :root{
+    --dark:#170a29;
+    --teal:#1fad82;
+    --line:#d8d8dc;
+    --bg1:#ffffff;
+    --bg2:#f6f6f8;
+    --gray:#8a8a92;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    color:var(--dark);
+  }
+  nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:var(--dark);
+    color:#fff;
+    display:flex;
+    align-items:stretch;
+    padding:0 32px;
+    height:56px;
+    flex-wrap:nowrap;
+  }
+  nav .brand{
+    font-weight:700;
+    font-size:15px;
+    margin-right:28px;
+    display:flex;
+    align-items:center;
+    letter-spacing:0.5px;
+  }
+  nav a{
+    color:#cfcfe0;
+    text-decoration:none;
+    font-size:13px;
+    margin-right:22px;
+    padding:0;
+    display:flex;
+    align-items:center;
+    height:100%;
+    border-bottom:2px solid transparent;
+  }
+  nav a:hover{color:#fff;border-bottom-color:var(--teal);}
+  .nav-item{position:relative;display:flex;align-items:center;}
+  .nav-item>a::after{content:'▾';font-size:9px;opacity:.7;margin-left:4px;}
+  .dropdown{
+    display:none;
+    position:absolute;
+    top:48px;
+    left:0;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.18);
+    padding:8px 0;
+    min-width:230px;
+    white-space:normal;
+  }
+  .nav-item:hover .dropdown{display:block;}
+  .dropdown a{
+    display:block;
+    color:var(--dark);
+    font-size:13px;
+    padding:9px 18px;
+    margin:0;
+    border-bottom:none;
+  }
+  .dropdown a:hover{background:var(--bg2);color:var(--dark);border-bottom:none;}
+  .banner{
+    background:#fff3cd;
+    color:#5c4600;
+    font-size:13px;
+    text-align:center;
+    padding:8px 12px;
+  }
+  .novita{
+    background:var(--bg2);
+    border-bottom:1px solid var(--line);
+    padding:22px 60px;
+    font-size:13px;
+    color:#444;
+  }
+  .novita b{
+    display:block;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--dark);
+    margin-bottom:8px;
+  }
+  section{
+    padding:70px 60px;
+    border-bottom:1px solid var(--line);
+  }
+  section:nth-child(odd){background:var(--bg1);}
+  section:nth-child(even){background:var(--bg2);}
+  .tag-page{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--gray);
+    margin-bottom:6px;
+  }
+  h1.page-title{
+    font-size:30px;
+    margin:0 0 26px;
+  }
+  .block{
+    border:1.5px dashed #b9b9c4;
+    background:#fff;
+    border-radius:8px;
+    padding:22px 24px;
+    margin-bottom:16px;
+    color:#555;
+    font-size:14px;
+    font-style:italic;
+  }
+  .block b{
+    display:block;
+    font-style:normal;
+    font-weight:700;
+    color:var(--dark);
+    margin-bottom:4px;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+  }
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .note{
+    background:rgba(23,10,41,0.05);
+    border-left:4px solid var(--dark);
+    border-radius:4px;
+    padding:14px 18px;
+    font-size:13px;
+    color:#444;
+    margin-top:6px;
+  }
+  .example-card{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:16px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px;
+    background:#fff;
+    margin-top:10px;
+  }
+  .example-card .ph{
+    background:#e4e4e9;
+    border-radius:6px;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    color:var(--gray);
+  }
+  .example-card ul{margin:0;padding-left:16px;font-size:13px;color:#444;line-height:1.6;}
+  footer{
+    padding:30px 60px;
+    font-size:12px;
+    color:#8a8a9c;
+    display:flex;
+    justify-content:space-between;
+    background:var(--dark);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="brand">NERAtech — anteprima struttura</span>
+  <a href="#home">Home</a>
+  <a href="#chisiamo">Chi siamo</a>
+  <span class="nav-item">
+    <a href="#servizi">Servizi</a>
+    <div class="dropdown">
+      <a href="#servizi-gis">Soluzioni GIS</a>
+      <a href="#servizi-sviluppo">Sviluppo software</a>
+      <a href="#servizi-analisi">Analisi ed elaborazione dati</a>
+      <a href="#servizi-infra">Infrastrutture</a>
+      <a href="#servizi-formazione">Formazione</a>
+      <a href="#servizi-consulenza">Consulenza</a>
+    </div>
+  </span>
+  <a href="#demo">Demo</a>
+  <a href="#progetti">Progetti</a>
+  <span class="nav-item">
+    <a href="#aggiornamenti">Aggiornamenti</a>
+    <div class="dropdown">
+      <a href="#aggiornamenti-eventi">Eventi</a>
+      <a href="#aggiornamenti-news">News</a>
+    </div>
+  </span>
+  <a href="#certificazioni">Certificazioni</a>
+  <a href="#contatti">Contatti</a>
+</nav>
+
+<div class="banner">
+  Anteprima di struttura — non è il design finale. 8 pagine totali.
+</div>
+
+<div class="novita">
+  <b>Novità rispetto al sito attuale</b>
+  Come operiamo (spostato in Home) — Blocco Consulenza (Home/Servizi) — Il logo raccontato (Chi siamo) —
+  Layout a portfolio (Progetti) — Mappa progetti (Progetti) — Aggiornamenti, Eventi e News unificate —
+  Modulo contatti strutturato (Contatti) — Feed LinkedIn (Contatti) — Pagina Demo (nuova).
+</div>
+
+<section id="home">
+  <div class="tag-page">Pagina 1 / 8</div>
+  <h1 class="page-title">Home</h1>
+  <div class="block"><b>Hero</b>Titolo + claim "Soluzioni GIS e software su misura. La tecnologia al servizio del territorio." + CTA Contattaci.</div>
+  <div class="grid2">
+    <div class="block"><b>Cosa facciamo</b>6 blocchi icona + testo: Soluzioni GIS, Sviluppo Software, Analisi dati, Infrastrutture, Formazione, Consulenza.</div>
+    <div class="block"><b>Come operiamo</b>Blocco con la metodologia/processo di lavoro, accanto a "Cosa facciamo" invece che in pagina separata.</div>
+  </div>
+  <div class="grid2">
+    <div class="block"><b>Creiamo insieme</b>Sezione CTA con immagine e link a Contatti, più un blocco di testo di accompagnamento (da scrivere).</div>
+    <div class="block"><b>Progetti in evidenza</b>Anteprima progetti con link alla pagina Progetti.</div>
+  </div>
+  <div class="block"><b>Footer</b>Dati aziendali, sitemap, feed/link LinkedIn, selettore lingua IT/EN.</div>
+</section>
+
+<section id="chisiamo">
+  <div class="tag-page">Pagina 2 / 8</div>
+  <h1 class="page-title">Chi siamo</h1>
+  <div class="block">
+    <b>1. La nostra identità — il logo raccontato</b>
+    Sezione dedicata alla costruzione del logo: significato dei singoli elementi che lo compongono, spiegati uno alla volta.
+    In versione finale sarà una composizione animata che scompone il logo pezzo per pezzo mentre si spiega il significato —
+    qui solo il placeholder della sezione e dell'ordine dei contenuti.
+  </div>
+  <div class="block"><b>2. Presentazione azienda</b>Storia, mission, approccio dell'azienda.</div>
+  <div class="block"><b>3. Team</b>Foto e ruoli del team (es. nome, ruolo) — in fondo alla pagina.</div>
+</section>
+
+<section id="servizi">
+  <div class="tag-page">Pagina 3 / 8</div>
+  <h1 class="page-title">Servizi</h1>
+  <div class="grid3">
+    <div class="block" id="servizi-gis"><b>Soluzioni GIS</b>Descrizione servizio + casi d'uso.</div>
+    <div class="block" id="servizi-sviluppo"><b>Sviluppo software</b>Descrizione servizio + casi d'uso.</div>
+    <div class="block" id="servizi-analisi"><b>Analisi ed elaborazione dati</b>Descrizione servizio + casi d'uso.</div>
+    <div class="block" id="servizi-infra"><b>Infrastrutture</b>Descrizione servizio + casi d'uso.</div>
+    <div class="block" id="servizi-formazione"><b>Formazione</b>Descrizione servizio + casi d'uso.</div>
+    <div class="block" id="servizi-consulenza"><b>Consulenza</b>Descrizione servizio + casi d'uso.</div>
+  </div>
+  <div class="note">
+    Questa è la pagina generale dei servizi: ogni box sarà cliccabile e aprirà una pagina dedicata al singolo servizio.
+    Questa sezione andrà strutturata in modo più articolato rispetto alle altre, per la varietà dei servizi offerti.
+  </div>
+</section>
+
+<section id="demo">
+  <div class="tag-page">Pagina 4 / 8</div>
+  <h1 class="page-title">Demo</h1>
+  <div class="block">
+    <b>Presentazione del servizio</b>
+    Pagina dedicata a presentare la demo come servizio: breve testo che spiega cosa mostra la demo e perché è utile
+    al potenziale cliente.
+  </div>
+  <div class="block">
+    <b>CTA verso la demo esterna</b>
+    Pulsante/link che porta alla demo vera e propria, ospitata fuori dal sito. Nessun contenuto interattivo qui,
+    quindi nessun impatto su risorse hosting/PHP — resta da definire solo l'URL esterno quando la demo sarà pronta.
+  </div>
+</section>
+
+<section id="progetti">
+  <div class="tag-page">Pagina 5 / 8</div>
+  <h1 class="page-title">Progetti</h1>
+  <div class="block"><b>Layout a portfolio</b>Galleria stile portfolio: ogni progetto sarà sviluppato come scheda dedicata, cliccabile dall'elenco generale.</div>
+  <div class="note">Esempio di scheda progetto (struttura, non contenuto reale):</div>
+  <div class="example-card">
+    <div class="ph">foto progetto</div>
+    <ul>
+      <li><b style="display:inline;font-size:12px;">Cliente:</b> nome cliente</li>
+      <li><b style="display:inline;font-size:12px;">Cosa è stato fatto:</b> sintesi intervento</li>
+      <li><b style="display:inline;font-size:12px;">Brief:</b> obiettivo iniziale del cliente</li>
+      <li><b style="display:inline;font-size:12px;">Innovazione:</b> cosa ha reso unica la soluzione</li>
+      <li><b style="display:inline;font-size:12px;">Anno:</b> es. 2025</li>
+    </ul>
+  </div>
+  <div class="block" style="margin-top:16px;">
+    <b>Mappa interattiva dei progetti</b>
+    Mappa con marker colorati secondo il brand, una location per progetto.
+  </div>
+</section>
+
+<section id="aggiornamenti">
+  <div class="tag-page">Pagina 6 / 8</div>
+  <h1 class="page-title">Aggiornamenti</h1>
+  <div class="grid2">
+    <div class="block" id="aggiornamenti-eventi"><b>Eventi</b>Eventi passati e futuri.</div>
+    <div class="block" id="aggiornamenti-news"><b>News</b>Comunicati e aggiornamenti aziendali.</div>
+  </div>
+</section>
+
+<section id="certificazioni">
+  <div class="tag-page">Pagina 7 / 8</div>
+  <h1 class="page-title">Certificazioni</h1>
+  <div class="block"><b>Loghi e certificazioni</b>Elenco/vetrina delle certificazioni aziendali.</div>
+</section>
+
+<section id="contatti">
+  <div class="tag-page">Pagina 8 / 8</div>
+  <h1 class="page-title">Contatti</h1>
+  <div class="grid2">
+    <div class="block"><b>Modulo di contatto strutturato</b>Form con campi organizzati (nome, email, oggetto, messaggio, privacy).</div>
+    <div class="block"><b>Dati aziendali</b>Sede legale, sede operativa, P.IVA, email, PEC.</div>
+  </div>
+  <div class="block"><b>Feed LinkedIn</b>Collegamento/embed alla pagina LinkedIn aziendale.</div>
+</section>
+
+<footer>
+  <span>NERAtech S.r.l. — Anteprima struttura sito, non design finale</span>
+  <span>Federica Lo Pinto · design@federicalopinto.it</span>
+</footer>
+
+</body>
+</html>
